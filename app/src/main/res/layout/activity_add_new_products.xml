@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewProducts">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Add New Product"
+
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/proNameLabel"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Product Name"
+                android:textSize="18sp"
+                android:layout_below="@id/topic"
+                />
+
+            <EditText
+                android:id="@+id/proName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proNameLabel"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Product ID"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/proIdLabel"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Product ID"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/proId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proIdLabel"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/proCategoryLabel"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proId"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Location"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/proCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proCategoryLabel"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/proLocationLabel"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proCategory"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Quantity"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/proLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/proLocationLabel"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/proQuantityLabel"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Average Price"
+
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/proQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proQuantityLabel"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/proAPrizeLabel"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proQuantity"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="Alert me when Qty is below"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/proAPrize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proAPrizeLabel"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/ProAlertLabel"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proAPrize"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:text="TextView"
+
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ProAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ProAlertLabel"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ProAlert"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="50dp"
+                />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
