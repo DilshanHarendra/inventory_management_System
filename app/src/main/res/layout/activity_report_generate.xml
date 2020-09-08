@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportGenerate">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/repotgenerator_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Report Generator"
+
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_baseline_arrow_back_24" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/botton_navigator"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/holo_blue_light"
+                android:layout_alignParentBottom="true"
+                app:menu="@menu/bottom_navigation_menu" />
+
+        </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

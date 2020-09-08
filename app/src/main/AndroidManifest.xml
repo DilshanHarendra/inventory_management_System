@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AddNewProducts"></activity>
+        <activity android:name=".ReportGenerate" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+
+        </activity>
+        <activity android:name=".AddNewProducts" />
         <activity android:name=".Home" />
         <activity android:name=".MainActivity">
             <intent-filter>
