@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNewProducts">
+    android:background="#FFFFFF"
+    tools:context=".AddNewProductFrag">
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
             <TextView
-                android:id="@+id/topic"
+                android:id="@+id/proTopic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -23,18 +26,67 @@
 
                 android:textSize="24sp" />
 
+
+            <TextView
+                android:id="@+id/proErr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proTopic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textColor="#FF0000"
+                android:textSize="18sp" />
+
+
+            <RelativeLayout
+                android:id="@+id/proImageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proErr"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <ImageView
+                    android:id="@+id/proImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    app:srcCompat="@drawable/dummyproduct" />
+
+                <Button
+                    android:id="@+id/removeProImageBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:background="#020000"
+                    android:text="X"
+                    android:textColor="#FFFFFF"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/addProImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proImageLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+
+                android:text="Select Image" />
+
             <TextView
                 android:id="@+id/proNameLabel"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/addProImage"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
                 android:text="Product Name"
-                android:textSize="18sp"
-                android:layout_below="@id/topic"
-                />
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/proName"
@@ -47,19 +99,19 @@
                 android:layout_marginRight="30dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Product ID"
+                android:text="mac book pro"
 
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/proIdLabel"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/proName"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
+                android:layout_marginRight="30dp"
                 android:text="Product ID"
                 android:textSize="18sp" />
 
@@ -72,19 +124,19 @@
                 android:layout_marginRight="30dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name"
+                android:text="mpb001"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/proCategoryLabel"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/proId"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
-                android:text="Location"
+                android:layout_marginRight="30dp"
+                android:text="Category"
                 android:textSize="18sp" />
 
             <EditText
@@ -96,43 +148,70 @@
                 android:layout_marginRight="30dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Name"
+                android:text="Laptop"
                 android:textSize="16sp" />
 
+
             <TextView
-                android:id="@+id/proLocationLabel"
+                android:id="@+id/ProLocationLabel"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/proCategory"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
-                android:text="Quantity"
+                android:layout_marginRight="30dp"
+                android:text="Location"
+
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/proLocation"
+                android:id="@+id/ProLocation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/proLocationLabel"
+                android:layout_below="@+id/ProLocationLabel"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="colombo"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/proPriceLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ProLocation"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="30dp"
+                android:text="Price"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/proPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/proPriceLabel"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name"
+                android:inputType="number"
+                android:text="250000"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/proQuantityLabel"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/proLocation"
+                android:layout_below="@+id/proPrice"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
-                android:text="Average Price"
+                android:layout_marginRight="30dp"
+                android:text="Quantity"
 
                 android:textSize="18sp" />
 
@@ -144,76 +223,49 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name"
+                android:inputType="number"
+                android:text="5"
                 android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/proAPrizeLabel"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/proQuantity"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
+                android:layout_marginRight="30dp"
                 android:text="Alert me when Qty is below"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/proAPrize"
+                android:id="@+id/proAQty"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/proAPrizeLabel"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name"
+                android:inputType="number"
+                android:text="2"
                 android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/ProAlertLabel"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/proAPrize"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp"
-                android:text="TextView"
-
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/ProAlert"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ProAlertLabel"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name"
-                android:textSize="16sp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/addProductBtn"
                 android:layout_width="match_parent"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:layout_centerHorizontal="true"
-                android:layout_below="@+id/ProAlert"
                 android:layout_height="wrap_content"
-                android:text="Add"
+                android:layout_below="@+id/proAQty"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="30dp"
                 android:layout_marginTop="50dp"
+                android:layout_marginRight="30dp"
                 android:layout_marginBottom="50dp"
-                />
+                android:text="Add" />
 
 
         </RelativeLayout>
     </ScrollView>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
