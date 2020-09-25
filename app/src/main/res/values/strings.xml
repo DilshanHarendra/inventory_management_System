@@ -2,5 +2,15 @@
     <string name="app_name">UEE</string>
     <string name="expens">Expens</string>
     <string name="income">Income</string>
-    <string name="home">Home</string>
+    <string name="home">Report History</string>
+    <string name="report_gen">Report generator</string>
+    <string name="lost">Lost</string>
+    <string name="detaild">Detaild</string>
+    <string name="report_generator">Report Generator</string>
+    <string name="ttytyry">TTytyry</string>
+    <string name="income_report">Income Report</string>
+    <string name="profit_loss_repot">Profit/Loss Repot</string>
+    <string name="profit_loss_detaild_report">Profit/Loss Detaild Report</string>
+    <string name="expenss_report">Expenss Report</string>
+    <string name="create">Create</string>
 </resources>
