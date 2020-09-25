@@ -3,4 +3,5 @@
     <string name="expens">Expens</string>
     <string name="income">Income</string>
     <string name="home">Home</string>
+    <string name="report_gen">Report generator</string>
 </resources>

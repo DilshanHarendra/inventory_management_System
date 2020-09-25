@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReportGenerate" android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        <activity android:name=".ReportGenerate">
 
         </activity>
         <activity android:name=".AddNewProducts" />
