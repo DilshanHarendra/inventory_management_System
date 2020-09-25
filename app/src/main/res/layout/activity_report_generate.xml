@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffff"
     tools:context=".ReportGenerate">
 
 
@@ -20,7 +21,7 @@
                 android:layout_marginTop="20dp"
                 android:textColor="#000"
                 android:textStyle="bold"
-                android:text="Report Generator"
+                android:text="@string/report_generator"
 
                 android:textSize="24sp" />
 
@@ -32,10 +33,24 @@
                 android:layout_marginTop="20dp"
                 android:background="@drawable/ic_baseline_arrow_back_24" />
 
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="60dp"
+                android:layout_above="@+id/botton_navigator">
+
+            </FrameLayout >
+
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/botton_navigator"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                app:itemIconTint="#ffffff"
+                app:itemTextColor="#ffffff"
                 android:background="@android:color/holo_blue_light"
                 android:layout_alignParentBottom="true"
                 app:menu="@menu/bottom_navigation_menu" />

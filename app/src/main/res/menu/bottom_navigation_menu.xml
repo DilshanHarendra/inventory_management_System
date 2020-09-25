@@ -1,31 +1,31 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-    android:id="@+id/page_1"
+    android:id="@+id/repothome"
     android:enabled="true"
     android:icon="@drawable/repot_generator_home"
     android:title="@string/home"/>
 
     <item
-        android:id="@+id/page_2"
-        android:enabled="false"
+        android:id="@+id/repotincome"
+        android:enabled="true"
         android:icon="@drawable/income"
         android:title="@string/income"/>
 
     <item
-        android:id="@+id/page_3"
+        android:id="@+id/repotexpens"
         android:enabled="true"
         android:icon="@drawable/expenss"
         android:title="@string/expens"/>
     <item
-        android:id="@+id/page_4"
+        android:id="@+id/reportlost"
         android:enabled="true"
         android:icon="@drawable/loss"
-        android:title="Lost"/>
+        android:title="@string/lost"/>
     <item
-        android:id="@+id/page_5"
+        android:id="@+id/repotdetaild"
         android:enabled="true"
         android:icon="@drawable/detaild_repot"
-        android:title="Detaild"/>
+        android:title="@string/detaild"/>
 
 
 </menu>
