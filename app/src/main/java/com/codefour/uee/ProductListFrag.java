@@ -1,7 +1,16 @@
 package com.codefour.uee;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -13,6 +22,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.codefour.uee.Products.Product;
 import com.codefour.uee.Products.ProductsController;
@@ -26,7 +36,7 @@ public class ProductListFrag extends Fragment {
     private ListView listView;
     private List<Product> products;
     private Button addNewBtn;
-
+    public static final int RUNTIME_PERMISSION_CODE = 7;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -57,6 +67,7 @@ public class ProductListFrag extends Fragment {
 
     return view;
     }
+
 
 
 

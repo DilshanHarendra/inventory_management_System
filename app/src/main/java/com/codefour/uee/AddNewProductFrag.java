@@ -1,11 +1,19 @@
 package com.codefour.uee;
 
+import android.Manifest;
 import android.app.Activity;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -19,8 +27,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.codefour.uee.Products.ProductsController;
+
+import static android.Manifest.permission.CAMERA;
 
 
 public class AddNewProductFrag extends Fragment {
@@ -30,6 +41,7 @@ public class AddNewProductFrag extends Fragment {
     private Button addButton,addImageBtn,removeImageBtn;
     private ImageView proImage;
     private String imageURI="NoImage";
+    public static final int RUNTIME_PERMISSION_CODE = 7;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -70,10 +82,30 @@ public class AddNewProductFrag extends Fragment {
         addImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,"Select Image"),1);
+
+
+                try {
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                        if (checkPermission()){
+                            Log.d("ueeIn","Permissiont hiyanwa");
+                            Toast.makeText(getActivity(),"Permission is Granted!", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent();
+                            intent.setType("image/*");
+                            intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
+                            startActivityForResult(Intent.createChooser(intent,"Select Image"),1);
+                        }else {
+                            Log.d("ueeIn","Permission na");
+                            requestPermission();
+                        }
+                    }
+                }catch (Exception e){
+                    Log.d("ueeIn","err "+e);
+                }
+
+
+
+
+
             }
         });
 
@@ -101,6 +133,61 @@ public class AddNewProductFrag extends Fragment {
             addImageBtn.setText("Change Image");
             Log.d("ueeIn",imageURI);
         }
+    }
+
+
+
+
+
+    private boolean checkPermission(){
+        return (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)== PackageManager.PERMISSION_GRANTED);
+    }
+    private void requestPermission(){
+
+        ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, RUNTIME_PERMISSION_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        switch (requestCode){
+            case RUNTIME_PERMISSION_CODE :
+                if (grantResults.length > 0){
+                    boolean storageAceepted = grantResults[0] == PackageManager.PERMISSION_GRANTED;
+                    if (storageAceepted){
+                        //Toast.makeText(getActivity(),"Permission granted", Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent();
+                        intent.setType("image/*");
+                        intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
+                        startActivityForResult(Intent.createChooser(intent,"Select Image"),1);
+                    }else {
+                        Toast.makeText(getActivity(),"Permission denied", Toast.LENGTH_LONG).show();
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+                            if (shouldShowRequestPermissionRationale(Manifest.permission.READ_EXTERNAL_STORAGE)){
+                                displayAlertMessage("You need to allow access for both permissions",
+                                        new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                                    requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, RUNTIME_PERMISSION_CODE);
+                                                }
+                                            }
+                                        });
+                                return;
+                            }
+                        }
+                    }
+                }
+                break;
+        }
+    }
+    public void displayAlertMessage(String message, DialogInterface.OnClickListener listener){
+        new AlertDialog.Builder(getActivity())
+                .setMessage(message)
+                .setPositiveButton("OK", listener)
+                .setNegativeButton("Cancel", null)
+                .create()
+                .show();
     }
 
 

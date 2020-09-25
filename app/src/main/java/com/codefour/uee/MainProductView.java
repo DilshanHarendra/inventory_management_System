@@ -1,16 +1,29 @@
 package com.codefour.uee;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import android.os.Bundle;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
+
+import static android.Manifest.permission.CAMERA;
 
 
 public class MainProductView extends AppCompatActivity {
 
     public static int frag=1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +31,8 @@ public class MainProductView extends AppCompatActivity {
 
 
 
-    }
 
+    }
 
 
 

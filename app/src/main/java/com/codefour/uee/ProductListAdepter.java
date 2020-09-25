@@ -1,10 +1,9 @@
 package com.codefour.uee;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+
 import android.net.Uri;
-import android.os.Environment;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,9 +14,9 @@ import android.widget.TextView;
 
 import com.codefour.uee.Products.Product;
 
-import java.io.File;
-import java.net.URI;
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ProductListAdepter extends ArrayAdapter<Product> {
 
@@ -36,13 +35,13 @@ public class ProductListAdepter extends ArrayAdapter<Product> {
         LayoutInflater inflater =LayoutInflater.from(this.context);
         convertView=inflater.inflate(mSource,parent,false);
         TextView name=(TextView) convertView.findViewById(R.id.proNameOne);
-        ImageView imageView=(ImageView) convertView.findViewById(R.id.proImageOne);
+        CircleImageView imageView=(CircleImageView) convertView.findViewById(R.id.proImageOne);
 
         name.setText(getItem(position).getProName());
         String img=getItem(position).getProImgUrl();
         if (!img.equals("NoImage")){
             try {
-                imageView.setImageURI(Uri.parse(img));
+               imageView.setImageURI(Uri.parse(img));
             }catch (Exception e){
                 Log.d("ueeIn","err "+e);
             }
