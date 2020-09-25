@@ -12,6 +12,34 @@ public class Product {
         return proImgUrl;
     }
 
+    public String getProId() {
+        return proId;
+    }
+
+    public String getProCategeory() {
+        return proCategeory;
+    }
+
+    public String getProLocation() {
+        return proLocation;
+    }
+
+    public String getProQuantity() {
+        return String.valueOf(proQuantity);
+    }
+
+    public String getProPrice() {
+        return String.valueOf(proPrice);
+    }
+
+    public String getProAlertQty() {
+        return String.valueOf(proAlertQty);
+    }
+
+    public int getId() {
+        return id;
+    }
+
     public Product(String proName, String proId, String proCategeory, String proLocation, String proImgUrl, int proQuantity, int proPrice, int proAlertQty, int id) {
         this.proName = proName;
         this.proId = proId;

@@ -5,44 +5,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home">
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">>
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:paddingBottom="20dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="30dp"
+            android:background="#EDEDED"
             android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
+                android:background="#FFFFFF"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:text="Home"
+                    android:textColor="#0CD9E8"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
                 <RelativeLayout
                     android:id="@+id/inventoryBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/inventoryIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
 
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        app:srcCompat="@drawable/inventoryicon" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/inventoryIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="Inventory Items"
                         android:textSize="18sp" />
                 </RelativeLayout>
@@ -50,25 +84,26 @@
                 <RelativeLayout
                     android:id="@+id/supplierBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/suplierIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/supplier" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/suplierIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="Suppliers"
                         android:textSize="18sp" />
                 </RelativeLayout>
@@ -78,33 +113,36 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
                 <RelativeLayout
                     android:id="@+id/customerBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/customerIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/customer" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/customerIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="Customers"
                         android:textSize="18sp" />
                 </RelativeLayout>
@@ -112,25 +150,26 @@
                 <RelativeLayout
                     android:id="@+id/inventoryReportBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/inventoryReport"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/inventoryreport" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/inventoryReport"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="Inventory Report"
                         android:textSize="18sp" />
                 </RelativeLayout>
@@ -140,33 +179,36 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
                 <RelativeLayout
                     android:id="@+id/purchaseOrderIconBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/purchaseOrderIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/purchorder" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/purchaseOrderIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="Purchase Order"
                         android:textSize="18sp" />
                 </RelativeLayout>
@@ -174,25 +216,26 @@
                 <RelativeLayout
                     android:id="@+id/salesOrderBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/salesOrderIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/salesorder" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/salesOrderIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="Sales Order"
                         android:textSize="18sp" />
                 </RelativeLayout>
@@ -202,52 +245,56 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
                 <RelativeLayout
                     android:id="@+id/expenseManagerBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
-                        android:id="@+id/expenseManagerIcon"
+                        android:id="@+id/stockTrikingIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/stocktraking" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/expenseManagerIcon"
+                        android:layout_below="@+id/stockTrikingIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
-                        android:text="Expense Manager"
+                        android:layout_marginTop="20dp"
+                        android:text="Stock Traking"
                         android:textSize="18sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/accountingReportsBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/accountingReportsIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/importdata" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -255,7 +302,7 @@
                         android:layout_below="@+id/accountingReportsIcon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="Accounting Reports"
+                        android:text="ImportData"
                         android:textSize="18sp" />
                 </RelativeLayout>
 
@@ -264,33 +311,37 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="30dp"
                 android:orientation="horizontal"
                 android:weightSum="1">
 
                 <RelativeLayout
                     android:id="@+id/importDataBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/importDataIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/stocktraking" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/importDataIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="Import Data"
                         android:textSize="18sp" />
                 </RelativeLayout>
@@ -298,25 +349,26 @@
                 <RelativeLayout
                     android:id="@+id/exportDataBtn"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
+                    android:background="#FFFFFF"
                     android:padding="10dp">
 
                     <ImageView
                         android:id="@+id/exportDataIcon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
-                        app:srcCompat="@mipmap/ic_launcher" />
+                        android:layout_marginTop="25dp"
+                        app:srcCompat="@drawable/stocktraking" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/exportDataIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="ExportData"
                         android:textSize="18sp" />
                 </RelativeLayout>

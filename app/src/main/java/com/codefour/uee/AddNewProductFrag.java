@@ -27,11 +27,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import com.codefour.uee.Products.ProductsController;
 
-import static android.Manifest.permission.CAMERA;
+
 
 
 public class AddNewProductFrag extends Fragment {
@@ -87,14 +87,14 @@ public class AddNewProductFrag extends Fragment {
                 try {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                         if (checkPermission()){
-                            Log.d("ueeIn","Permissiont hiyanwa");
-                            Toast.makeText(getActivity(),"Permission is Granted!", Toast.LENGTH_LONG).show();
+                           // Log.d("ueeIn","Permissiont hiyanwa");
+                          //  Toast.makeText(getActivity(),"Permission is Granted!", Toast.LENGTH_LONG).show();
                             Intent intent = new Intent();
                             intent.setType("image/*");
                             intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
                             startActivityForResult(Intent.createChooser(intent,"Select Image"),1);
                         }else {
-                            Log.d("ueeIn","Permission na");
+                          //  Log.d("ueeIn","Permission na");
                             requestPermission();
                         }
                     }
@@ -161,7 +161,7 @@ public class AddNewProductFrag extends Fragment {
                         intent.setAction(Intent.ACTION_OPEN_DOCUMENT);
                         startActivityForResult(Intent.createChooser(intent,"Select Image"),1);
                     }else {
-                        Toast.makeText(getActivity(),"Permission denied", Toast.LENGTH_LONG).show();
+                     //   Toast.makeText(getActivity(),"Permission denied", Toast.LENGTH_LONG).show();
                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
                             if (shouldShowRequestPermissionRationale(Manifest.permission.READ_EXTERNAL_STORAGE)){
                                 displayAlertMessage("You need to allow access for both permissions",

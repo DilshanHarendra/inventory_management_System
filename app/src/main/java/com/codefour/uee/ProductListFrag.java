@@ -1,32 +1,28 @@
 package com.codefour.uee;
 
-import android.Manifest;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
+
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
-import android.view.KeyEvent;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
+
 import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.SearchView;
 
 import com.codefour.uee.Products.Product;
 import com.codefour.uee.Products.ProductsController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -36,19 +32,20 @@ public class ProductListFrag extends Fragment {
     private ListView listView;
     private List<Product> products;
     private Button addNewBtn;
-    public static final int RUNTIME_PERMISSION_CODE = 7;
+    private SearchView search;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_product_list, container, false);
-
+        MainProductView.frag=1;
         listView= view.findViewById(R.id.productList);
         addNewBtn=view.findViewById(R.id.addNewProductBtn);
-
+        search=view.findViewById(R.id.productSearch);
 
         products= ProductsController.getAllProucts(getActivity());
-        Log.d("ueeIn","product"+products.size());
+
         ProductListAdepter productListAdepter = new ProductListAdepter(getActivity(),R.layout.one_product_row,products);
         listView.setAdapter(productListAdepter);
 
@@ -63,11 +60,48 @@ public class ProductListFrag extends Fragment {
             }
         });
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d("ueeIn","product"+i);
+                MainProductView.product= products.get(i);
+                FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                FragmentTransaction transaction =fragmentManager.beginTransaction();
+                transaction.replace(R.id.productViewFrag, new ShowSingleProductFrag());
+                transaction.commit();
+            }
+        });
+
+
+        search.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                setFilterdItems(s);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                setFilterdItems(s);
+                return false;
+            }
+        });
+
 
 
     return view;
     }
 
+    public void setFilterdItems(String key){
+        List<Product> list = new ArrayList<>();
+        for (Product product : products  ){
+            if(product.getProName().toLowerCase().startsWith(key.toLowerCase())){
+                list.add(product);
+            }
+        }
+        ProductListAdepter productListAdepter = new ProductListAdepter(getActivity(),R.layout.one_product_row,list);
+        listView.setAdapter(productListAdepter);
+    }
 
 
 
