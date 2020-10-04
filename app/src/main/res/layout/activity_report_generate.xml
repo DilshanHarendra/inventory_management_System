@@ -19,7 +19,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:textColor="#000"
+                android:textColor="#00D4FF"
                 android:textStyle="bold"
                 android:text="@string/report_generator"
 

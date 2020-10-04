@@ -1,58 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="#fff"
-    >
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/income_report"
-        android:textStyle="bold"
-        android:textColor="#5A5A5A"
-        android:textSize="20sp"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="20dp"
-        />
 
-    <EditText
-        android:id="@+id/income"
-        android:layout_width="138dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="47dp"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
-        android:layout_toStartOf="@+id/editTextDate2"
-        android:ems="10"
-        android:inputType="date"
-        android:textSize="12sp"
-        tools:text="@tools:sample/date/mmddyy" />
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTextDate2"
-        android:layout_width="123dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="109dp"
-        android:ems="10"
-        android:inputType="date"
-        android:textSize="12sp"
-        tools:text="@tools:sample/date/mmddyy" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="10dp"
-        android:text="@string/create" />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/date" />
+
+            <EditText
+                android:id="@+id/datetext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/text_area"
+                android:ems="10"
+                android:inputType="datetime"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/amountlable"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:text="Amount" />
+
+            <EditText
+                android:id="@+id/amounttext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/text_area"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:inputType="number"
+                  />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/paylable"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:text="Payer/Payee*"
+                 />
+
+            <EditText
+                android:id="@+id/paytext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/text_area"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                  />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/paymentmethodlable"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:text="Payement Method" />
+
+            <EditText
+                android:id="@+id/paymenettext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/text_area"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+
+               />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/categorylable"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:text="@string/category" />
+
+            <EditText
+                android:id="@+id/categorytext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/text_area"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/proCategoryLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="5dp"
+                android:text="Note"
+                  />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName5"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/text_area"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:ems="10"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:orientation="horizontal"
+                android:weightSum="100"
+
+                >
+
+                <Button
+                   android:layout_weight="50"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/cancel_button"
+                    android:layout_height="match_parent"
+                    android:layout_margin="2.5dp"
+                    android:textColor="#FFFF"
+                    android:background="@drawable/cancelbtn_style"
+                    android:text="Cancel">
+
+                </Button>
+
+                <Button
+                    android:layout_weight="50"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/save_btn"
+                    android:layout_margin="2.5dp"
+                    android:textColor="#FFFF"
 
 
-</RelativeLayout>
+                    android:background="@drawable/savebtn_style"
+                    android:layout_height="match_parent"
+                    android:text="Save">
+
+                </Button>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
