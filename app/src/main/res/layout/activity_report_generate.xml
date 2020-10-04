@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff"
+    tools:context=".ReportGenerate">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/repotgenerator_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:text="@string/report_generator"
+
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/back_button_style" />
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="60dp"
+                android:layout_above="@+id/botton_navigator">
+
+            </FrameLayout >
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/botton_navigator"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                app:itemIconTint="#ffffff"
+                app:itemTextColor="#ffffff"
+                android:background="@android:color/holo_blue_light"
+                android:layout_alignParentBottom="true"
+                app:menu="@menu/bottom_navigation_menu" />
+
+        </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

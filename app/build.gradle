@@ -5,11 +5,14 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.codefour.uee"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk{
+
+        }
     }
     buildTypes {
         release {
@@ -27,6 +30,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
 
     api 'com.oguzdev:CircularFloatingActionMenu:1.0.2'
 
