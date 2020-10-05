@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,18 +18,27 @@ import com.codefour.uee.R;
 
 public class RepotGenerateExpenceFragmnet extends Fragment {
     Button createExpenss;
+    ListView listview;
+    ArrayAdapter adapter;
+
+    String[] mobileArray = {"Android","IPhone","WindowsMobile","Blackberry",
+            "WebOS","Ubuntu","Windows7","Max OS X"};
 
     @Nullable
     @Override
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+
+
         return inflater.inflate(R.layout.reportexpensfragment,null);
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        createExpenss=view.findViewById(R.id.createExpenss);
+        createExpenss=view.findViewById(R.id.createIncome);
         createExpenss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,5 +46,14 @@ public class RepotGenerateExpenceFragmnet extends Fragment {
                 startActivity(intent);
             }
         });
+
+        adapter = new ArrayAdapter<String>(view.getContext(),
+                R.layout.activity_listview, mobileArray);
+        listview=view.findViewById(R.id.listview);
+        listview.setAdapter(adapter);
+
+
     }
+
+
 }

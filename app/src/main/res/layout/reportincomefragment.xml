@@ -7,22 +7,23 @@
     android:layout_height="match_parent"
 
 
-    android:background="#fff">
+    android:background="@drawable/form_background">
 
     <EditText
         android:id="@+id/startDate"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:textSize="14dp"
-
+        android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/text_area"
-        android:ems="10"
         android:drawableRight="@drawable/start_date"
+        android:ems="10"
         android:hint="Start Date"
-        android:textAlignment="center"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColor="#1C0202"
+        android:textColorHint="#231212"
+        android:textSize="14dp"
         app:layout_constraintEnd_toStartOf="@+id/endDate"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,17 +32,18 @@
     <EditText
         android:id="@+id/endDate"
         android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:textSize="14dp"
+        android:layout_height="35dp"
         android:layout_marginStart="20dp"
-        android:drawableRight="@drawable/start_date"
-
         android:layout_marginTop="32dp"
-        android:hint="End Date"
-        android:textAlignment="center"
         android:background="@drawable/text_area"
+
+        android:drawableRight="@drawable/start_date"
         android:ems="10"
+        android:hint="End Date"
         android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="#0E0C0C"
+        android:textSize="14dp"
         app:layout_constraintEnd_toStartOf="@+id/createIncome"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/startDate"
@@ -50,15 +52,32 @@
     <Button
         android:id="@+id/createIncome"
         android:layout_width="0dp"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="16dp"
-        android:background="@drawable/cancelbtn_style"
+        android:background="@drawable/savebtn_style"
         android:text="Create"
         android:textColor="#ffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/endDate"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/text_area"
+        android:ems="10"
+        android:hint="Search hear"
+        android:textAlignment="center"
+        android:inputType="textNoSuggestions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/startDate"
+        app:layout_constraintTop_toBottomOf="@+id/startDate" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
