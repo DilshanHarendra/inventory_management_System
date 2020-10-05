@@ -9,232 +9,56 @@
 
     android:background="#fff">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="1dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <EditText
+        android:id="@+id/startDate"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:textSize="14dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/text_area"
+        android:ems="10"
+        android:drawableRight="@drawable/start_date"
+        android:hint="Start Date"
+        android:textAlignment="center"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/endDate"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="vertical">
+    <EditText
+        android:id="@+id/endDate"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:textSize="14dp"
+        android:layout_marginStart="20dp"
+        android:drawableRight="@drawable/start_date"
 
-            <TextView
-                android:id="@+id/date"
-                android:layout_width="match_parent"
+        android:layout_marginTop="32dp"
+        android:hint="End Date"
+        android:textAlignment="center"
+        android:background="@drawable/text_area"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/createIncome"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/startDate"
+        app:layout_constraintTop_toTopOf="parent" />
 
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/date" />
-
-            <EditText
-                android:id="@+id/datetext"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:background="@drawable/text_area"
-                android:ems="10"
-                android:inputType="datetime"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/amountlable"
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="5dp"
-                android:text="Amount" />
-
-            <EditText
-                android:id="@+id/amounttext"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/text_area"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-                android:inputType="number"
-                  />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/paylable"
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="5dp"
-                android:text="Payer/Payee*"
-                 />
-
-            <EditText
-                android:id="@+id/paytext"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/text_area"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                  />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/paymentmethodlable"
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="5dp"
-                android:text="Payement Method" />
-
-            <EditText
-                android:id="@+id/paymenettext"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/text_area"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-
-               />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/categorylable"
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/category" />
-
-            <EditText
-                android:id="@+id/categorytext"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/text_area"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-                 />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/proCategoryLabel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginBottom="5dp"
-                android:text="Note"
-                  />
-
-            <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/text_area"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:ems="10"
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="76dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:orientation="horizontal"
-                android:weightSum="100"
-
-                >
-
-                <Button
-                   android:layout_weight="50"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/cancel_button"
-                    android:layout_height="match_parent"
-                    android:layout_margin="2.5dp"
-                    android:textColor="#FFFF"
-                    android:background="@drawable/cancelbtn_style"
-                    android:text="Cancel">
-
-                </Button>
-
-                <Button
-                    android:layout_weight="50"
-                    android:layout_width="wrap_content"
-                    android:id="@+id/save_btn"
-                    android:layout_margin="2.5dp"
-                    android:textColor="#FFFF"
-
-
-                    android:background="@drawable/savebtn_style"
-                    android:layout_height="match_parent"
-                    android:text="Save">
-
-                </Button>
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-    </LinearLayout>
+    <Button
+        android:id="@+id/createIncome"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/cancelbtn_style"
+        android:text="Create"
+        android:textColor="#ffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/endDate"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

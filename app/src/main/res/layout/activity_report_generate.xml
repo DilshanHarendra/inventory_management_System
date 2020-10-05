@@ -27,6 +27,8 @@
 
             <Button
                 android:id="@+id/back_btn"
+                android:drawableRight="@drawable/ic_baseline_arrow_back_24"
+
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"

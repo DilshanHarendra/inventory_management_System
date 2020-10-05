@@ -26,7 +26,7 @@ import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 public class Home extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
 
-    private RelativeLayout inventoryItems,reports;
+    private RelativeLayout inventoryItems,reports ,accountingReports;
     TextView textView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +35,7 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
 
 
         reports=findViewById(R.id.inventoryReportBtn);
+        accountingReports=findViewById(R.id.accountingReportsBtn);
 
 
         reports.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +43,13 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
             public void onClick(View view) {
                 startActivity(new Intent(Home.this,Analitics.class));
                 finish();
+            }
+        });
+
+        accountingReports.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,ReportGenerate.class));
             }
         });
 

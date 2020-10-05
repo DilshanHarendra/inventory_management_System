@@ -316,7 +316,7 @@
                         android:layout_below="@+id/accountingReportsIcon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="10dp"
-                        android:text="ImportData"
+                        android:text="Accounting Report"
                         android:textSize="18sp" />
                 </RelativeLayout>
 
