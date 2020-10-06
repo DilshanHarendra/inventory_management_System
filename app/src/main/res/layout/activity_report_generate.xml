@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffff"
+    android:background="@drawable/repot_generetor_main_background"
     tools:context=".ReportGenerate">
 
 
@@ -19,31 +19,39 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:textColor="#000"
-                android:textStyle="bold"
                 android:text="@string/report_generator"
+                android:textColor="#FCFFFF"
+                android:textSize="24sp"
 
-                android:textSize="24sp" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/back_btn"
+                android:drawableRight="@drawable/ic_baseline_arrow_back_24"
+
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/ic_baseline_arrow_back_24" />
+                android:background="@drawable/back_button_style" />
 
             <FrameLayout
-                android:id="@+id/fragment_container"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginTop="60dp"
-                android:layout_marginBottom="60dp"
-                android:layout_above="@+id/botton_navigator">
+                android:background="@drawable/form_background"
 
-            </FrameLayout >
+                android:id="@+id/fragment_container"
+                android:layout_width="371dp"
+                android:layout_height="580dp"
+                android:layout_above="@+id/botton_navigator"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="86dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="65dp">
+
+            </FrameLayout>
 
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/botton_navigator"

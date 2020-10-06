@@ -1,6 +1,9 @@
 package com.codefour.uee;
 
+
+
 import androidx.appcompat.app.AppCompatActivity;
+
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +13,9 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
+
 
     Button login;
     Handler handler;
@@ -24,8 +29,21 @@ public class MainActivity extends AppCompatActivity {
 
 
         setContentView(R.layout.activity_main);
+
+
+       startActivity(new Intent(MainActivity.this,Home.class));
+       finish();
+
+
+
+
+
+
+
+
+
 handler = new Handler();
-handler.postDelayed(new Runnable() {
+/*handler.postDelayed(new Runnable() {
     @Override
     public void run() {
         Intent i = new Intent(MainActivity.this, Login.class);
@@ -33,8 +51,9 @@ handler.postDelayed(new Runnable() {
         finish();
     }
 },3000);
-
+*/
 
     }
+
 
 }

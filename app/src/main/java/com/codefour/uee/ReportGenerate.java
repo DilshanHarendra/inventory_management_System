@@ -28,20 +28,22 @@ public class ReportGenerate extends AppCompatActivity implements BottomNavigatio
 
     BottomNavigationView bottomNavigationView;
     Button backButton;
+    TextView titleText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
+//
+//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         setContentView(R.layout.activity_report_generate);
 
 
 
         backButton=findViewById(R.id.back_btn);
         bottomNavigationView=findViewById(R.id.botton_navigator);
+        titleText =findViewById(R.id.repotgenerator_title);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
 
 
@@ -51,45 +53,56 @@ public class ReportGenerate extends AppCompatActivity implements BottomNavigatio
 
     }
 
-
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         Fragment fragment=null;
-
         switch (item.getItemId()){
             case  R.id.repothome:
                 fragment=new RepotGenerateHomeFragmnet();
-                 Log.i(TAG,"Home Fragments");
+                setMainTitle("Report Home");
+
+                Log.i(TAG,"Home Fragments");
+
+
 
 
                 break;
             case R.id.repotexpens:
                 fragment=new RepotGenerateExpenceFragmnet();
-                 Log.i(TAG,"Expence Fragments");
+                setMainTitle("Expens Manager");
+
+                Log.i(TAG,"Expence Fragments");
+
+
                 break;
 
             case R.id.repotincome:
                 fragment=new RepotGenerateIncomeFragmnet();
-                 Log.i(TAG,"Income Fragments");
+                setMainTitle("Income Manager");
+
+                Log.i(TAG,"Income Fragments");
+
 
                 break;
             case R.id.reportlost:
                 fragment=new RepotGenerateLostFragmnet();
-                 Log.i(TAG,"Lost Fragments");
+                setMainTitle("Profit/Lost Report");
+
+                Log.i(TAG,"Profit/Lost Fragments");
+
 
                 break;
 
             case R.id.repotdetaild:
                 fragment=new RepotGenerateDetailsFragmnet();
-                 Log.i(TAG,"Details Fragments");
+                setMainTitle("Profit/Loss Details Report");
+                Log.i(TAG,"Profit/Loss detailed Fragments");
+
 
                 break;
 
         }
-
-
         return loadFragment(fragment);
     }
 
@@ -111,6 +124,10 @@ public class ReportGenerate extends AppCompatActivity implements BottomNavigatio
                 finish();
              }
         });
+    }
+
+    public void setMainTitle(String title){
+        titleText.setText(title);
     }
 
 }

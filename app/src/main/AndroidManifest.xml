@@ -2,26 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codefour.uee">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/stocktraking"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/stocktraking"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Regsiter"
-            android:theme="@style/AppTheme.NoActionBar"
-            ></activity>
-        <activity android:name=".Login"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity
-            android:name=".ReportGenerate"
-            />
-        <activity android:name=".AddNewProducts" />
+        <activity android:name=".taxesMain"></activity>
+        <activity android:name=".taxes" />
+        <activity android:name=".supplierMain" />
+        <activity android:name=".supplier" />
+        <activity android:name=".reportMain" />
+        <activity android:name=".reportList" />
+        <activity android:name=".feedback" />
+        <activity android:name=".itemList" />
+        <activity android:name=".customerMain" />
+        <activity android:name=".customer" />
+        <activity android:name=".CreateExpense" />
+        <activity android:name=".ShowReport"></activity>
+        <activity android:name=".CreateIncome" />
+        <activity android:name=".Analitics" />
+        <activity android:name=".MainProductView" />
         <activity android:name=".Home" />
-        <activity android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            >
+        <activity
+            android:name=".Regsiter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ReportGenerate" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

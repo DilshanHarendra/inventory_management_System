@@ -13,4 +13,6 @@
     <string name="profit_loss_detaild_report">Profit/Loss Detaild Report</string>
     <string name="expenss_report">Expenss Report</string>
     <string name="create">Create</string>
+    <string name="date">Date</string>
+    <string name="category">Category</string>
 </resources>

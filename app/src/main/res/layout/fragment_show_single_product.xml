@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ProductFagments.AddNewProductFrag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:background="#FFFFFF">
+
+
+            <TextView
+                android:id="@+id/singleProTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textColor="#0CD8E7"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/singleProTopic"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:background="#EDEDED"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+
+                <ImageView
+                    android:id="@+id/sproImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#FFFFFF"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    app:srcCompat="@drawable/dummyproduct" />
+
+                <TextView
+                    android:id="@+id/pNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sproImage"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="Product Name"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/spName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pNameLabel"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Product Name"
+
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/pIDLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spName"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="Product Id/Part No"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:id="@+id/spID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pIDLabel"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Id123"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/pQuantityLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spID"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="Quantity"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:id="@+id/spQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pQuantityLabel"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Id123"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/pLocationLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spQuantity"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="Location"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/spLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pLocationLabel"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Id123"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/pAverageLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spLocation"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="Average Price"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:id="@+id/spAveragePrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pAverageLabel"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Id123"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/pAlertLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/spAveragePrice"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="5dp"
+                    android:text="Alert me WHen Qty is below"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+
+                <TextView
+                    android:id="@+id/spAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pAlertLabel"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="5dp"
+                    android:text="Id123"
+                    android:textSize="18sp" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>

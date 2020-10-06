@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".ProductFagments.AddNewProductFrag">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:background="#FFFFFF">
+
+
+            <TextView
+                android:id="@+id/proTopic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Add New Product"
+
+                android:textColor="#0CD8E7"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/proErr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/proTopic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#FF0000"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/proErr"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="#EDEDED">
+
+                <RelativeLayout
+                    android:id="@+id/proImageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp">
+
+                    <ImageView
+                        android:id="@+id/proImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="#FFFFFF"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        app:srcCompat="@drawable/dummyproduct" />
+
+                    <Button
+                        android:id="@+id/removeProImageBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="5dp"
+                        android:background="#00BFBFBF"
+                        android:text="X"
+                        android:textColor="#000000"
+                        android:textSize="24sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/addProImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proImageLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#0CD8E7"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Select Image"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/proNameLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/addProImage"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#00FFFFFF"
+                    android:text="Product Name"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/proName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proNameLabel"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/proIdLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proName"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Product ID"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/proId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proIdLabel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/proCategoryLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proId"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Category"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/proCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proCategoryLabel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/ProLocationLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proCategory"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Location"
+
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/ProLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ProLocationLabel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/proPriceLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ProLocation"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Price"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/proPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/proPriceLabel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/proQuantityLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proPrice"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Quantity"
+
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/proQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proQuantityLabel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="5dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/proAPrizeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proQuantity"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="30dp"
+                    android:text="Alert me when Qty is below"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/proAQty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proAPrizeLabel"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="30dp"
+                    android:background="#FFFFFF"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+
+                    android:textSize="16sp" />
+
+
+                <Button
+                    android:id="@+id/addProductBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/proAQty"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="50dp"
+                    android:background="#0CD8E7"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="Save"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
