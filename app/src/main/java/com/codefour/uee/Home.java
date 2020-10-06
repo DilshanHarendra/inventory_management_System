@@ -38,15 +38,6 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
         accountingReports=findViewById(R.id.accountingReportsBtn);
         inventoryItems=findViewById(R.id.inventoryBtn);
 
-
-        reports.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Home.this,Analitics.class));
-
-            }
-        });
-
 //        reports.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
