@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/stocktraking"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateExpense"></activity>
+        <activity android:name=".ShowReport"></activity>
+        <activity android:name=".CreateExpense" />
         <activity android:name=".CreateIncome" />
         <activity android:name=".Analitics" />
         <activity android:name=".MainProductView" />

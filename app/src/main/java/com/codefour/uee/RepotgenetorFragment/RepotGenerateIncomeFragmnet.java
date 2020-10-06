@@ -2,9 +2,11 @@ package com.codefour.uee.RepotgenetorFragment;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -15,9 +17,10 @@ import androidx.fragment.app.Fragment;
 
 import com.codefour.uee.CreateIncome;
 import com.codefour.uee.R;
+import com.codefour.uee.ShowReport;
 
 public class RepotGenerateIncomeFragmnet extends Fragment {
-    String TAG="RepotGenerateIncomeFragmnet";
+    String TAG= this.getClass().getName();
     Button createIncome;
     ListView listview;
     ArrayAdapter adapter;
@@ -60,6 +63,15 @@ public class RepotGenerateIncomeFragmnet extends Fragment {
                 R.layout.activity_listview, incomeArry);
         listview=view.findViewById(R.id.listview_income);
         listview.setAdapter(adapter);
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.i(TAG,"Item click");
+                Intent intent =new Intent(getContext(), ShowReport.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
