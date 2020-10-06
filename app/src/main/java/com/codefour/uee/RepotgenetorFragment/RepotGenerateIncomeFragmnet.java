@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +19,22 @@ import com.codefour.uee.R;
 public class RepotGenerateIncomeFragmnet extends Fragment {
     String TAG="RepotGenerateIncomeFragmnet";
     Button createIncome;
+    ListView listview;
+    ArrayAdapter adapter;
+
+    String[] incomeArry =
+            {
+                    "Income report 2020-09-20","Income report 2020-10-4",
+                    "Details report 2020-09-25","Income report 2020-10-4",
+                    "Income report 2020-09-30","Income report 2020-10-4",
+                    "Expens report 2020-10-9","Income report 2020-10-4",
+                    "Income report 2020-10-14","Income report 2020-10-19",
+                    "Expens report 2020-10-24","Income report 2021-10-30",
+                    "Income report 2020-09-30","Income report 2020-10-4",
+                    "Details report 2020-10-9","Income report 2020-10-4",
+                    "Expens report 2020-10-14","Income report 2020-10-19",
+                    "Income report 2020-10-24","Income report 2022-10-30",
+            };
 
 
     Button createIncomeIntent;
@@ -37,6 +55,11 @@ public class RepotGenerateIncomeFragmnet extends Fragment {
                 startActivity(incomeIntent);
             }
         });
+
+        adapter = new ArrayAdapter<String>(view.getContext(),
+                R.layout.activity_listview, incomeArry);
+        listview=view.findViewById(R.id.listview_income);
+        listview.setAdapter(adapter);
 
 
     }

@@ -21,8 +21,19 @@ public class RepotGenerateExpenceFragmnet extends Fragment {
     ListView listview;
     ArrayAdapter adapter;
 
-    String[] mobileArray = {"Android","IPhone","WindowsMobile","Blackberry",
-            "WebOS","Ubuntu","Windows7","Max OS X"};
+    String[] expensArray =
+            {"Expens report 2020-09-10","Expens report 2020-09-15",
+            "Expens report 2020-09-20","Expens report 2020-10-4",
+            "Expens report 2020-09-25","Expens report 2020-10-4",
+            "Expens report 2020-09-30","Expens report 2020-10-4",
+            "Expens report 2020-10-9","Expens report 2020-10-4",
+            "Expens report 2020-10-14","Expens report 2020-10-19",
+            "Expens report 2020-10-24","Expens report 2021-10-30",
+             "Expens report 2020-09-30","Expens report 2020-10-4",
+                    "Expens report 2020-10-9","Expens report 2020-10-4",
+                    "Expens report 2020-10-14","Expens report 2020-10-19",
+                    "Expens report 2020-10-24","Expens report 2022-10-30",
+    };
 
     @Nullable
     @Override
@@ -48,7 +59,7 @@ public class RepotGenerateExpenceFragmnet extends Fragment {
         });
 
         adapter = new ArrayAdapter<String>(view.getContext(),
-                R.layout.activity_listview, mobileArray);
+                R.layout.activity_listview, expensArray);
         listview=view.findViewById(R.id.listview);
         listview.setAdapter(adapter);
 

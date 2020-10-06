@@ -87,16 +87,16 @@ public class ReportGenerate extends AppCompatActivity implements BottomNavigatio
                 break;
             case R.id.reportlost:
                 fragment=new RepotGenerateLostFragmnet();
-                setMainTitle("Lost Manager");
+                setMainTitle("Profit/Lost Report");
 
-                Log.i(TAG,"Lost Fragments");
+                Log.i(TAG,"Profit/Lost Fragments");
 
 
                 break;
 
             case R.id.repotdetaild:
                 fragment=new RepotGenerateDetailsFragmnet();
-                setMainTitle("Details Manager");
+                setMainTitle("Profit/Loss Details Report");
                 Log.i(TAG,"Profit/Loss detailed Fragments");
 
 
