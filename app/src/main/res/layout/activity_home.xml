@@ -103,6 +103,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
                     android:background="#FFFFFF"
+                    android:onClick="launchSupplier"
                     android:padding="10dp">
 
                     <ImageView
@@ -142,6 +143,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
                     android:background="#FFFFFF"
+                    android:onClick="launchCustomer"
                     android:padding="10dp">
 
                     <ImageView
@@ -169,6 +171,7 @@
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
                     android:background="#FFFFFF"
+                    android:onClick="launchReportMain"
                     android:padding="10dp">
 
                     <ImageView
@@ -335,13 +338,14 @@
                 android:weightSum="1">
 
                 <RelativeLayout
-                    android:id="@+id/importDataBtn"
+                    android:id="@+id/feedbackBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
                     android:background="#FFFFFF"
+                    android:onClick="launchFeedback"
                     android:padding="10dp">
 
                     <ImageView
@@ -357,18 +361,19 @@
                         android:layout_below="@+id/importDataIcon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="20dp"
-                        android:text="Import Data"
+                        android:text="Feedback"
                         android:textSize="18sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
-                    android:id="@+id/exportDataBtn"
+                    android:id="@+id/taxesBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
                     android:layout_marginLeft="5dp"
                     android:layout_weight="0.5"
                     android:background="#FFFFFF"
+                    android:onClick="launchTaxes"
                     android:padding="10dp">
 
                     <ImageView
@@ -384,7 +389,7 @@
                         android:layout_below="@+id/exportDataIcon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="20dp"
-                        android:text="ExportData"
+                        android:text="Taxes"
                         android:textSize="18sp" />
                 </RelativeLayout>
 
