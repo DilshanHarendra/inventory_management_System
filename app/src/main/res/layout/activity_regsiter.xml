@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,184 +8,239 @@
     tools:context=".Regsiter">
 
 
+    <ImageView
+        android:id="@+id/imageView"
 
-    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background"
+        android:scaleType="fitXY"/>
 
-        android:id="@+id/Compnaytxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="Company Name"
-        app:boxStrokeColor="@color/colorPrimary"
-style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/RegisterCard"
+        android:layout_width="0dp"
+        android:layout_height="585dp"
+        android:layout_gravity="center"
+        android:elevation="4dp"
 
-        <com.google.android.material.textfield.TextInputEditText
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shadowDx="20"
-            android:shadowDy="0"
-            android:shadowRadius="20" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_height="match_parent">
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/usertxt"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:hint="User Type">
+            <com.google.android.material.textfield.TextInputLayout
 
-        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/Compnaytxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:hint="Company Name"
+                app:boxStrokeColor="@color/colorPrimary"
+                app:layout_constraintBottom_toTopOf="@id/usertxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
+                <com.google.android.material.textfield.TextInputEditText
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shadowColor="#676363"
-            android:shadowDx="20"
-            android:shadowDy="20"
-            android:shadowRadius="20" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/nametxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Full Name">
-
-        <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowDx="20"
+                    android:shadowDy="0"
+                    android:shadowRadius="20" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shadowColor="#676363"
-            android:shadowDx="20"
-            android:shadowDy="20"
-            android:shadowRadius="20" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/usertxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="1dp"
+                android:hint="User Type"
+
+                app:layout_constraintBottom_toTopOf="@id/nametxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Compnaytxt">
+
+                <com.google.android.material.textfield.TextInputEditText
 
 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#676363"
+                    android:shadowDx="20"
+                    android:shadowDy="20"
+                    android:shadowRadius="20" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nametxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="1dp"
+                android:hint="Full Name"
+                app:layout_constraintBottom_toTopOf="@id/Emailtxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/usertxt"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
 
 
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Email">
-
-        <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#676363"
+                    android:shadowDx="20"
+                    android:shadowDy="20"
+                    android:shadowRadius="20" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shadowColor="#676363"
-            android:shadowDx="20"
-            android:shadowDy="20"
-            android:shadowRadius="20" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:id="@+id/Emailtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="1dp"
+                android:hint="Email"
+                app:layout_constraintBottom_toTopOf="@id/Pincodetxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nametxt"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
 
 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#676363"
+                    android:shadowDx="20"
+                    android:shadowDy="20"
+                    android:shadowRadius="20" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Pin Code">
+                android:id="@+id/Pincodetxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="1dp"
+                android:hint="Pin Code"
+                app:layout_constraintBottom_toTopOf="@id/Passwordtxt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Emailtxt">
 
-        <com.google.android.material.textfield.TextInputEditText
-
-
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shadowColor="#676363"
-            android:shadowDx="20"
-            android:shadowDy="20"
-            android:shadowRadius="20" />
-    </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputEditText
 
 
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Password">
-
-        <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#676363"
+                    android:shadowDx="20"
+                    android:shadowDy="20"
+                    android:shadowRadius="20" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shadowColor="#676363"
-            android:shadowDx="20"
-            android:shadowDy="20"
-            android:shadowRadius="20" />
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
 
-    <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/Passwordtxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="1dp"
+                android:hint="Password"
+                app:layout_constraintBottom_toTopOf="@id/register"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Pincodetxt">
 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Confirm Password">
-
-        <com.google.android.material.textfield.TextInputEditText
+                <com.google.android.material.textfield.TextInputEditText
 
 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:shadowColor="#676363"
-            android:shadowDx="20"
-            android:shadowDy="20"
-            android:shadowRadius="20" />
-    </com.google.android.material.textfield.TextInputLayout>
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shadowColor="#676363"
+                    android:shadowDx="20"
+                    android:shadowDy="20"
+                    android:shadowRadius="20" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+
+            <!--                android:id="@+id/Confirmpasswordtxt"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginStart="40dp"-->
+            <!--                android:layout_marginTop="5dp"-->
+            <!--                android:layout_marginEnd="40dp"-->
+            <!--                android:layout_marginBottom="5dp"-->
+            <!--                android:hint="Confirm Password"-->
+            <!--                app:layout_constraintBottom_toTopOf="@id/register"-->
+            <!--                app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/Passwordtxt">-->
+
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
 
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/back_button_style"
-        android:text="Register" />
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:shadowColor="#676363"-->
+            <!--                    android:shadowDx="20"-->
+            <!--                    android:shadowDy="20"-->
+            <!--                    android:shadowRadius="20" />-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
 
 
+            <Button
+                android:id="@+id/register"
+                android:layout_width="319dp"
+                android:layout_height="59dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/back_button_style"
+                android:text="Register"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/Passwordtxt" />
 
-</LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
