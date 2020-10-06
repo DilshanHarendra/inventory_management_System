@@ -38,13 +38,13 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
         accountingReports=findViewById(R.id.accountingReportsBtn);
 
 
-        reports.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(Home.this,Analitics.class));
-                finish();
-            }
-        });
+//        reports.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(Home.this,Analitics.class));
+//                finish();
+//            }
+//        });
 
         accountingReports.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -148,4 +148,33 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    //Kevin's functions
+
+    public void launchCustomer(View view) {
+        Intent intent = new Intent(this, customerMain.class);
+        startActivity(intent);
+    }
+
+    public void launchFeedback(View view) {
+        Intent intent = new Intent(this, feedback.class);
+        startActivity(intent);
+    }
+
+    public void launchReportMain(View view) {
+        Intent intent = new Intent(this, reportMain.class);
+        startActivity(intent);
+    }
+
+    public void launchSupplier(View view) {
+        Intent intent = new Intent(this, supplierMain.class);
+        startActivity(intent);
+    }
+
+    public void launchTaxes(View view) {
+        Intent intent = new Intent(this, taxesMain.class);
+        startActivity(intent);
+    }
+
+
 }
