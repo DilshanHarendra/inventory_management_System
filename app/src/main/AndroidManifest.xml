@@ -22,6 +22,8 @@
         <activity android:name=".customerMain" />
         <activity android:name=".customer" />
         <activity android:name=".CreateExpense" />
+        <activity android:name=".ShowReport"></activity>
+        <activity android:name=".CreateExpense" />
         <activity android:name=".CreateIncome" />
         <activity android:name=".Analitics" />
         <activity android:name=".MainProductView" />
