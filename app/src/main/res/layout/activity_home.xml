@@ -315,8 +315,9 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/accountingReportsIcon"
                         android:layout_centerHorizontal="true"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:text="Accounting Report"
+                        android:textAlignment="center"
                         android:textSize="18sp" />
                 </RelativeLayout>
 

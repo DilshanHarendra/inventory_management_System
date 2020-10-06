@@ -1,4 +1,4 @@
-package com.codefour.uee;
+package com.codefour.uee.ProductFagments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -13,7 +13,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.codefour.uee.MainProductView;
 import com.codefour.uee.Products.Product;
+import com.codefour.uee.R;
 
 
 public class ShowSingleProductFrag extends Fragment {
