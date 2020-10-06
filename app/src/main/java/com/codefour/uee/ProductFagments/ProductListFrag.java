@@ -1,4 +1,4 @@
-package com.codefour.uee;
+package com.codefour.uee.ProductFagments;
 
 
 import android.os.Bundle;
@@ -19,8 +19,11 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 
+import com.codefour.uee.MainProductView;
+import com.codefour.uee.ProductListAdepter;
 import com.codefour.uee.Products.Product;
 import com.codefour.uee.Products.ProductsController;
+import com.codefour.uee.R;
 
 import java.util.ArrayList;
 import java.util.List;

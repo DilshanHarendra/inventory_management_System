@@ -1,4 +1,4 @@
-package com.codefour.uee;
+package com.codefour.uee.ProductFagments;
 
 import android.Manifest;
 import android.app.Activity;
@@ -29,9 +29,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.codefour.uee.MainProductView;
+import com.codefour.uee.ProductFagments.ProductListFrag;
 import com.codefour.uee.Products.ProductsController;
-
-
+import com.codefour.uee.R;
 
 
 public class AddNewProductFrag extends Fragment {

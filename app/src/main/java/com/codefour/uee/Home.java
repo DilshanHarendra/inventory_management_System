@@ -36,7 +36,7 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
 
         reports=findViewById(R.id.inventoryReportBtn);
         accountingReports=findViewById(R.id.accountingReportsBtn);
-
+        inventoryItems=findViewById(R.id.inventoryBtn);
 
 //        reports.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -45,6 +45,7 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
 //                finish();
 //            }
 //        });
+
 
         accountingReports.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +62,7 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
             window.setStatusBarColor(ContextCompat.getColor(Home.this, R.color.statusBarColor));
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
-        inventoryItems=findViewById(R.id.inventoryBtn);
+
 
         inventoryItems.setOnClickListener(new View.OnClickListener() {
             @Override
