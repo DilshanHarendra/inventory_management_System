@@ -21,7 +21,7 @@
         android:scaleType="fitXY"/>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/PurchaseCard"
+        android:id="@+id/ReisterCard"
         android:layout_width="0dp"
         android:layout_height="585dp"
         android:layout_gravity="center"
@@ -242,5 +242,40 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/registerHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="12dp"
+        android:text="Register"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ReisterCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toEndOf="@+id/backRegister"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <ImageButton
+        android:id="@+id/backRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#00FFFFFF"
+        android:tint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/ReisterCard"
+        app:layout_constraintEnd_toStartOf="@+id/registerHeading"
+        app:layout_constraintHorizontal_bias="0.097"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.574"
+        app:srcCompat="@drawable/abc_vector_test" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

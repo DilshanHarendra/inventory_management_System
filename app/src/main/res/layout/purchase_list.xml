@@ -3,13 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/listtitle"
         android:layout_width="132dp"
         android:layout_height="30dp"
         android:layout_marginStart="72dp"
+        android:layout_marginTop="16dp"
         android:layout_marginBottom="2dp"
         android:clickable="true"
         android:text="Praveen"
@@ -26,14 +27,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="72dp"
 
-        android:layout_marginBottom="653dp"
+        android:layout_marginTop="15dp"
         android:clickable="true"
         android:text="Purchase OrderID:- T130"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listtitle"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/listtitle" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -42,14 +41,14 @@
         android:layout_marginStart="97dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="11dp"
-        android:layout_marginBottom="701dp"
+        android:layout_marginBottom="52dp"
         android:background="#00C89393"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
         app:layout_constraintEnd_toStartOf="@+id/imageView9"
         app:layout_constraintStart_toEndOf="@+id/listtitle"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="?attr/actionModeShareDrawable" />
 
     <ImageView
@@ -63,8 +62,10 @@
         android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/listtitle"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@android:drawable/ic_media_ff" />
 
     <ImageView
@@ -72,14 +73,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="37dp"
-        android:layout_marginBottom="692dp"
         android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442"
         app:srcCompat="?android:attr/actionModeFindDrawable" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="184dp"
+        android:layout_height="152dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="47dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15"
+        app:srcCompat="@drawable/cart" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="302dp"
+        android:fontFamily="@font/poppins"
+        android:text="Click on Cart to delete item"
+        android:textColor="#AF2424"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="54dp"
+        android:fontFamily="@font/poppins"
+        android:text="Items:- Tomatoes, Cabbage"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageView12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

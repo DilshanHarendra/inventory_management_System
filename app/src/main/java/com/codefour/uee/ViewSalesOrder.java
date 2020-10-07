@@ -50,12 +50,12 @@ public class ViewSalesOrder extends AppCompatActivity {
         list=new ArrayList<>();
 
 
-        list.add(new SalesModel("shanuka"));
-        list.add(new SalesModel("Miyura"));
-        list.add(new SalesModel("Dunish"));
-        list.add(new SalesModel("Vehan"));
-        list.add(new SalesModel("Sathira"));
-        list.add(new SalesModel("Twain"));
+        list.add(new SalesModel("Mr shanuka"));
+        list.add(new SalesModel("Mr Miyura"));
+        list.add(new SalesModel("Mr Dunish"));
+        list.add(new SalesModel("Mr Vehan"));
+        list.add(new SalesModel("Mr Sathira"));
+        list.add(new SalesModel("Mr Twain"));
 
 
 //        list.add("one");

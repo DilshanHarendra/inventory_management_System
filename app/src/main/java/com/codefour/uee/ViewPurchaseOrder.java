@@ -64,12 +64,12 @@ public class ViewPurchaseOrder extends AppCompatActivity {
         list=new ArrayList<>();
 
 
-        list.add(new purchaseModel("shanuka"));
-        list.add(new purchaseModel("Miyura"));
-        list.add(new purchaseModel("Dunish"));
-        list.add(new purchaseModel("Vehan"));
-        list.add(new purchaseModel("Sathira"));
-        list.add(new purchaseModel("Twain"));
+        list.add(new purchaseModel("Ranasigha Sons"));
+        list.add(new purchaseModel("Healthy Life"));
+        list.add(new purchaseModel("Easy Goods"));
+        list.add(new purchaseModel("Green Vege"));
+        list.add(new purchaseModel("Harcourts"));
+        list.add(new purchaseModel("Vege worls"));
 
 
 //        list.add("one");
