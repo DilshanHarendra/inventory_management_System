@@ -25,6 +25,8 @@ public class ViewSalesOrder extends AppCompatActivity {
 
     private ImageButton addSales;
 
+    private ImageButton backsales;
+
     ArrayList<SalesModel> list_itemsSales=new ArrayList<SalesModel>();
 
     private List<SalesModel> list;
@@ -40,12 +42,24 @@ public class ViewSalesOrder extends AppCompatActivity {
 
         addSales=findViewById(R.id.SalesAdd);
 
+        backsales=findViewById(R.id.SalesBack);
+
         addSales.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ViewSalesOrder.this,AddSales.class));
             }
         });
+
+
+        backsales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ViewSalesOrder.this,Home.class));
+            }
+        });
+
+
 
         list=new ArrayList<>();
 

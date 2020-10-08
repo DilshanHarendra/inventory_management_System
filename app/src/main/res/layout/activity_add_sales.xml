@@ -21,29 +21,36 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/PurchaseCard"
-        android:layout_width="0dp"
-        android:layout_height="570dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="center"
         android:elevation="4dp"
-
         app:cardBackgroundColor="#E7EAEF"
+
         app:cardCornerRadius="45dp"
+        app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1.4"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.7"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="570dp">
+            android:layout_height="match_parent"
+
+            >
 
 
             <Button
                 android:id="@+id/salesSave"
                 android:layout_width="319dp"
                 android:layout_height="59dp"
+                android:layout_marginStart="32dp"
                 android:layout_marginTop="14dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="4dp"
                 android:background="@drawable/greenbutton"
                 android:text="Save"
@@ -59,10 +66,13 @@
                 android:id="@+id/PurchaseorderID"
                 android:layout_width="350dp"
                 android:layout_height="41dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:background="@drawable/form_background"
                 android:ems="10"
                 android:hint="  Order ID"
                 android:inputType="textPersonName"
+                android:textColor="#150C0C"
                 app:layout_constraintBottom_toTopOf="@+id/addCustomer_sales"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
@@ -73,11 +83,14 @@
                 android:id="@+id/addCustomer_sales"
                 android:layout_width="350dp"
                 android:layout_height="41dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:layout_marginBottom="52dp"
                 android:background="@drawable/form_background"
                 android:ems="10"
                 android:hint="  Add Customer"
                 android:inputType="textPersonName"
+                android:textColor="#150C0C"
                 app:layout_constraintBottom_toTopOf="@+id/taxSpinnerSales"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.442"
@@ -88,6 +101,8 @@
                 android:id="@+id/taxSpinnerSales"
                 android:layout_width="350dp"
                 android:layout_height="41dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:background="@drawable/form_background"
                 android:entries="@array/tax_spinner"
                 app:layout_constraintBottom_toTopOf="@+id/termSpinnerSales"
@@ -99,11 +114,13 @@
                 android:id="@+id/termSpinnerSales"
                 android:layout_width="350dp"
                 android:layout_height="41dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:background="@drawable/form_background"
                 android:entries="@array/term_spinner"
+
                 app:layout_constraintBottom_toTopOf="@+id/salesCard"
                 app:layout_constraintEnd_toEndOf="parent"
-
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/taxSpinnerSales" />
 
@@ -111,20 +128,25 @@
                 android:id="@+id/SalesDate"
                 android:layout_width="350dp"
                 android:layout_height="41dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:background="@drawable/form_background"
                 android:ems="10"
                 android:hint="  Date"
                 android:inputType="date"
+                android:textColor="#150C0C"
+
                 app:layout_constraintBottom_toTopOf="@+id/taxSpinnerSales"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-
                 app:layout_constraintTop_toBottomOf="@id/addCustomer_sales" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/salesCard"
                 android:layout_width="346dp"
                 android:layout_height="119dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 app:cardBackgroundColor="#EFE9E9"
                 app:cardCornerRadius="20dp"
                 app:layout_constraintBottom_toTopOf="@+id/salesSave"
@@ -141,6 +163,7 @@
                         android:layout_width="57dp"
                         android:layout_height="23dp"
                         android:text="LKR 0"
+                        android:textColor="#150C0C"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@+id/salesNotes"
@@ -174,6 +197,7 @@
                         android:ems="10"
                         android:hint="  Notes..."
                         android:inputType="textPersonName"
+                        android:textColor="#150C0C"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -202,15 +226,15 @@
 
     <ImageButton
         android:id="@+id/salesBack"
-        android:layout_width="68dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:backgroundTint="#00531010"
         app:layout_constraintBottom_toTopOf="@id/PurchaseCard"
         app:layout_constraintEnd_toStartOf="@id/SalesHeading"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.669"
+        app:layout_constraintVertical_bias="0.633"
         app:srcCompat="@drawable/abc_vector_test" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
