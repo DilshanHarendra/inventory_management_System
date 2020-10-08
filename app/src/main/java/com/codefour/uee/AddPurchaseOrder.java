@@ -21,7 +21,7 @@ public class AddPurchaseOrder extends AppCompatActivity {
         purchaseBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AddPurchaseOrder.this,Home.class));
+                startActivity(new Intent(AddPurchaseOrder.this,ViewPurchaseOrder.class));
             }
         });
     }

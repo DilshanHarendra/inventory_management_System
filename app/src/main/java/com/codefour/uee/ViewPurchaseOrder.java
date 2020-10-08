@@ -37,6 +37,8 @@ public class ViewPurchaseOrder extends AppCompatActivity {
 
     private ImageButton purchaseAdd;
 
+    private ImageButton purchaseBack;
+
     ArrayList<purchaseModel> list_items=new ArrayList<purchaseModel>();
     List <purchaseModel> list;
     purchaseAdapter adapter;
@@ -54,10 +56,19 @@ public class ViewPurchaseOrder extends AppCompatActivity {
 
         purchaseAdd=findViewById(R.id.PurchaseAdd);
 
+        purchaseBack=findViewById(R.id.purchaseBack);
+
         purchaseAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(ViewPurchaseOrder.this,AddPurchaseOrder.class));
+            }
+        });
+
+        purchaseBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ViewPurchaseOrder.this,Home.class));
             }
         });
 

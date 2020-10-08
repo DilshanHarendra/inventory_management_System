@@ -21,7 +21,7 @@ public class AddSales extends AppCompatActivity {
         salesBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AddSales.this,Home.class));
+                startActivity(new Intent(AddSales.this,ViewSalesOrder.class));
             }
         });
     }
