@@ -33,7 +33,7 @@
         android:id="@+id/imageButton19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@android:drawable/divider_horizontal_dark"
+        android:background="@drawable/button_shadow"
         android:onClick="goHome"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
