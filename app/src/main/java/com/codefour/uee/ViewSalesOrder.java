@@ -42,7 +42,7 @@ public class ViewSalesOrder extends AppCompatActivity {
 
         addSales=findViewById(R.id.SalesAdd);
 
-        backsales=findViewById(R.id.salesBack);
+        backsales=findViewById(R.id.SalesBack);
 
         addSales.setOnClickListener(new View.OnClickListener() {
             @Override
