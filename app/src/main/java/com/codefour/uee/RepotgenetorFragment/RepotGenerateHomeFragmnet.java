@@ -31,14 +31,14 @@ public class RepotGenerateHomeFragmnet extends Fragment {
     String[] incomeArry =
             {
                     "Income report 2020-09-20","Income report 2020-10-4",
-                    "Income report 2020-09-25","Income report 2020-10-4",
-                    "Income report 2020-09-30","Income report 2020-10-4",
-                    "Income report 2020-10-9","Income report 2020-10-4",
+                    "Expense report 2020-09-25","Income report 2020-10-4",
+                    "Detaild report 2020-09-30","Income report 2020-10-4",
+                    "Expense report 2020-10-9","Income report 2020-10-4",
                     "Income report 2020-10-14","Income report 2020-10-19",
-                    "Income report 2020-10-24","Income report 2021-10-30",
-                    "Income report 2020-09-30","Income report 2020-10-4",
-                    "Income report 2020-10-9","Income report 2020-10-4",
-                    "Income report 2020-10-14","Income report 2020-10-19",
+                    "Expense report 2020-10-24","Income report 2021-10-30",
+                    "Detaild report 2020-09-30","Income report 2020-10-4",
+                    "Expense report 2020-10-9","Income report 2020-10-4",
+                    "Detaild report 2020-10-14","Income report 2020-10-19",
                     "Income report 2020-10-24","Income report 2022-10-30",
             };
 
