@@ -8,28 +8,26 @@
 
     <Button
         android:id="@+id/list_item_delete"
-        android:layout_width="75dp"
-        android:layout_height="31dp"
-        android:background="@drawable/deletebutton"
-        android:text="Delete"
+        android:layout_width="39dp"
+        android:layout_height="36dp"
+        android:background="@drawable/deleteicon"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.956"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <Button
         android:id="@+id/list_item_edit"
-        android:layout_width="66dp"
-        android:layout_height="33dp"
-        android:background="@drawable/editbutton"
-        android:text="Edit"
+        android:layout_width="35dp"
+        android:layout_height="28dp"
+        android:background="@drawable/editicon"
         android:textColor="@color/cardview_light_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.827"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.041" />
