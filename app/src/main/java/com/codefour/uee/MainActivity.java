@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-       startActivity(new Intent(MainActivity.this,Home.class));
-       finish();
+//       startActivity(new Intent(MainActivity.this,Home.class));
+//       finish();
 
 
 
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 handler = new Handler();
-/*handler.postDelayed(new Runnable() {
+handler.postDelayed(new Runnable() {
     @Override
     public void run() {
         Intent i = new Intent(MainActivity.this, Login.class);
@@ -51,7 +51,7 @@ handler = new Handler();
         finish();
     }
 },3000);
-*/
+
 
     }
 
