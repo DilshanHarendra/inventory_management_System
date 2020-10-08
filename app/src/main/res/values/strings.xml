@@ -15,4 +15,5 @@
     <string name="create">Create</string>
     <string name="date">Date</string>
     <string name="category">Category</string>
+    <string name="create_income">Create Income</string>
 </resources>
