@@ -22,13 +22,15 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/PurchaseCard"
         android:layout_width="0dp"
-        android:layout_height="570dp"
+        android:layout_height="0dp"
         android:layout_gravity="center"
         android:elevation="4dp"
-
+        app:layout_constraintHeight_percent="0.80"
         app:cardBackgroundColor="#E7EAEF"
         app:cardCornerRadius="45dp"
+        app:layout_constrainedHeight="true"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1.45"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +38,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="570dp">
+            android:layout_height="match_parent">
 
 
             <Button
@@ -63,6 +65,7 @@
                 android:ems="10"
                 android:hint="  Order ID"
                 android:inputType="textPersonName"
+                android:textColor="#150C0C"
                 app:layout_constraintBottom_toTopOf="@+id/addCustomer_sales"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.502"
@@ -78,6 +81,7 @@
                 android:ems="10"
                 android:hint="  Add Customer"
                 android:inputType="textPersonName"
+                android:textColor="#150C0C"
                 app:layout_constraintBottom_toTopOf="@+id/taxSpinnerSales"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.442"
@@ -115,10 +119,11 @@
                 android:ems="10"
                 android:hint="  Date"
                 android:inputType="date"
+                android:textColor="#150C0C"
                 app:layout_constraintBottom_toTopOf="@+id/taxSpinnerSales"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
 
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/addCustomer_sales" />
 
             <androidx.cardview.widget.CardView
@@ -141,6 +146,7 @@
                         android:layout_width="57dp"
                         android:layout_height="23dp"
                         android:text="LKR 0"
+                        android:textColor="#150C0C"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toTopOf="@+id/salesNotes"
@@ -174,6 +180,7 @@
                         android:ems="10"
                         android:hint="  Notes..."
                         android:inputType="textPersonName"
+                        android:textColor="#150C0C"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
