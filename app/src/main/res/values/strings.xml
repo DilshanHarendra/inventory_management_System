@@ -16,4 +16,18 @@
     <string name="date">Date</string>
     <string name="category">Category</string>
     <string name="create_income">Create Income</string>
+    <string-array name="tax_spinner">
+        <item>Select Tax</item>
+        <item>10% Tax</item>
+        <item>20% Tax</item>
+        <item>30% Tax</item>
+        <item>40% Tax</item>
+    </string-array>
+    <string-array name="term_spinner">
+        <item>Select Term</item>
+        <item>2 months</item>
+        <item>6 months</item>
+        <item>1 Year</item>
+        <item>2 Years</item>
+    </string-array>
 </resources>

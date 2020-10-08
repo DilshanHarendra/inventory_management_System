@@ -11,7 +11,12 @@
         android:roundIcon="@drawable/stocktraking"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".taxesMain"></activity>
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".ViewSalesOrder" />
+        <activity android:name=".ViewPurchaseOrder" />
+        <activity android:name=".AddPurchaseOrder" />
+        <activity android:name=".AddSales" />
+        <activity android:name=".taxesMain" />
         <activity android:name=".taxes" />
         <activity android:name=".supplierMain" />
         <activity android:name=".supplier" />
@@ -22,7 +27,7 @@
         <activity android:name=".customerMain" />
         <activity android:name=".customer" />
         <activity android:name=".CreateExpense" />
-        <activity android:name=".ShowReport"></activity>
+        <activity android:name=".ShowReport" />
         <activity android:name=".CreateIncome" />
         <activity android:name=".Analitics" />
         <activity android:name=".MainProductView" />

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPurchaseOrder">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/background"
+        android:scaleType="fitXY"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/PurchaseCard"
+        android:layout_width="0dp"
+        android:layout_height="570dp"
+        android:layout_gravity="center"
+        android:elevation="4dp"
+
+        app:cardBackgroundColor="#E7EAEF"
+        app:cardCornerRadius="45dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="570dp">
+
+
+            <Button
+                android:id="@+id/purchaseSave"
+                android:layout_width="319dp"
+                android:layout_height="59dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:background="@drawable/greenbutton"
+                android:text="Save"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/purchaseSubCard" />
+
+            <EditText
+                android:id="@+id/PurchaseorderID"
+                android:layout_width="350dp"
+                android:layout_height="41dp"
+                android:background="@drawable/form_background"
+                android:ems="10"
+                android:hint="  Order ID"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/addCustomer_purchase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/addCustomer_purchase"
+                android:layout_width="350dp"
+                android:layout_height="41dp"
+                android:layout_marginBottom="52dp"
+                android:background="@drawable/form_background"
+                android:ems="10"
+                android:hint="  Add Customer"
+                android:inputType="textPersonName"
+                app:layout_constraintBottom_toTopOf="@+id/taxSpinnerPurchase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.442"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/PurchaseorderID" />
+
+            <Spinner
+                android:id="@+id/taxSpinnerPurchase"
+                android:layout_width="350dp"
+                android:layout_height="41dp"
+                android:background="@drawable/form_background"
+                android:entries="@array/tax_spinner"
+                app:layout_constraintBottom_toTopOf="@+id/termSpinnerPurchase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/PurchaseDate" />
+
+            <Spinner
+                android:id="@+id/termSpinnerPurchase"
+                android:layout_width="350dp"
+                android:layout_height="41dp"
+                android:background="@drawable/form_background"
+                android:entries="@array/term_spinner"
+                app:layout_constraintBottom_toTopOf="@+id/purchaseSubCard"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/taxSpinnerPurchase" />
+
+            <EditText
+                android:id="@+id/PurchaseDate"
+                android:layout_width="350dp"
+                android:layout_height="41dp"
+                android:background="@drawable/form_background"
+                android:ems="10"
+                android:hint="  Date"
+                android:inputType="date"
+                app:layout_constraintBottom_toTopOf="@+id/taxSpinnerPurchase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@id/addCustomer_purchase" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/purchaseSubCard"
+                android:layout_width="346dp"
+                android:layout_height="119dp"
+                app:cardBackgroundColor="#EFE9E9"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintBottom_toTopOf="@+id/purchaseSave"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/termSpinnerPurchase">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/purchasePrice"
+                        android:layout_width="57dp"
+                        android:layout_height="23dp"
+                        android:text="LKR 0"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/purchaseNotes"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/TotaltxtPurchasePurchase"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/TotaltxtPurchasePurchase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total"
+                        android:textColor="#150C0C"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toTopOf="@+id/purchaseNotes"
+                        app:layout_constraintEnd_toEndOf="@id/purchasePrice"
+                        app:layout_constraintHorizontal_bias="0.3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/purchaseNotes"
+                        android:layout_width="0dp"
+                        android:layout_height="78dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/round_editfield"
+                        android:ems="10"
+                        android:hint="  Notes..."
+                        android:inputType="textPersonName"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/TotaltxtPurchasePurchase" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/PurchaseHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="150dp"
+        android:text="Add Purchase Order"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/PurchaseCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/purchaseBack"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/purchaseBack"
+        android:layout_width="68dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="32dp"
+        android:backgroundTint="#00531010"
+        app:layout_constraintBottom_toTopOf="@id/PurchaseCard"
+        app:layout_constraintEnd_toStartOf="@id/PurchaseHeading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.675"
+        app:srcCompat="@drawable/abc_vector_test" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

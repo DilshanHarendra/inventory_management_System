@@ -63,7 +63,7 @@
                     android:paddingLeft="5dp"
                     android:text="Product Name"
                     android:textColor="#000000"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/spName"
@@ -71,9 +71,12 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/pNameLabel"
                     android:layout_marginTop="10dp"
-                    android:paddingLeft="5dp"
-                    android:text="Product Name"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
 
+                    android:paddingLeft="5dp"
+
+                    android:text="Product Name"
                     android:textSize="18sp" />
 
 
@@ -86,7 +89,7 @@
                     android:paddingLeft="5dp"
                     android:text="Product Id/Part No"
                     android:textColor="#000000"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
 
                 <TextView
@@ -95,6 +98,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/pIDLabel"
                     android:layout_marginTop="10dp"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
                     android:paddingLeft="5dp"
                     android:text="Id123"
                     android:textSize="18sp" />
@@ -109,7 +114,7 @@
                     android:paddingLeft="5dp"
                     android:text="Quantity"
                     android:textColor="#000000"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
 
                 <TextView
@@ -118,6 +123,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/pQuantityLabel"
                     android:layout_marginTop="10dp"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
                     android:paddingLeft="5dp"
                     android:text="Id123"
                     android:textSize="18sp" />
@@ -132,7 +139,7 @@
                     android:paddingLeft="5dp"
                     android:text="Location"
                     android:textColor="#000000"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/spLocation"
@@ -140,6 +147,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/pLocationLabel"
                     android:layout_marginTop="10dp"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
                     android:paddingLeft="5dp"
                     android:text="Id123"
                     android:textSize="18sp" />
@@ -154,7 +163,7 @@
                     android:paddingLeft="5dp"
                     android:text="Average Price"
                     android:textColor="#000000"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
 
                 <TextView
@@ -163,6 +172,8 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/pAverageLabel"
                     android:layout_marginTop="10dp"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
                     android:paddingLeft="5dp"
                     android:text="Id123"
                     android:textSize="18sp" />
@@ -177,7 +188,7 @@
                     android:paddingLeft="5dp"
                     android:text="Alert me WHen Qty is below"
                     android:textColor="#000000"
-                    android:textSize="24sp" />
+                    android:textSize="20sp" />
 
 
                 <TextView
@@ -187,6 +198,8 @@
                     android:layout_below="@+id/pAlertLabel"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:background="#FFFFFF"
+                    android:padding="8dp"
                     android:paddingLeft="5dp"
                     android:text="Id123"
                     android:textSize="18sp" />

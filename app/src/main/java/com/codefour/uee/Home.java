@@ -26,7 +26,7 @@ import com.oguzdev.circularfloatingactionmenu.library.SubActionButton;
 
 public class Home extends AppCompatActivity  implements NavigationView.OnNavigationItemSelectedListener {
 
-    private RelativeLayout inventoryItems,reports ,accountingReports;
+    private RelativeLayout inventoryItems,reports ,accountingReports,sales,purchase,expense;
     TextView textView1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,10 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
         reports=findViewById(R.id.inventoryReportBtn);
         accountingReports=findViewById(R.id.accountingReportsBtn);
         inventoryItems=findViewById(R.id.inventoryBtn);
+        sales=findViewById(R.id.salesOrderBtn);
+        purchase=findViewById(R.id.purchaseOrderIconBtn);
+
+        expense=findViewById(R.id.expenseManagerBtn);
 
 //        reports.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -51,6 +55,28 @@ public class Home extends AppCompatActivity  implements NavigationView.OnNavigat
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Home.this,ReportGenerate.class));
+            }
+        });
+
+        sales.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,ViewSalesOrder.class));
+            }
+        });
+
+
+        purchase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,ViewPurchaseOrder.class));
+            }
+        });
+
+        expense.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Home.this,Settings.class));
             }
         });
 
