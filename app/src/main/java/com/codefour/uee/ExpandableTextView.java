@@ -15,7 +15,8 @@ public class ExpandableTextView extends BaseExpandableListAdapter {
     String[] setting={
             "Change Language",
             "Change Pin",
-            "Change Name"
+            "Change Name",
+            "Change Currency"
     };
 
     String[][] answer={
@@ -27,6 +28,9 @@ public class ExpandableTextView extends BaseExpandableListAdapter {
             {
                 "Name :- Vidula Dantanarayana,"
 
+            },
+            {
+                "Currency:- LKR"
             }
     };
 

@@ -202,8 +202,8 @@
 
     <ImageButton
         android:id="@+id/purchaseBack"
-        android:layout_width="68dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:backgroundTint="#00531010"
         app:layout_constraintBottom_toTopOf="@id/PurchaseCard"

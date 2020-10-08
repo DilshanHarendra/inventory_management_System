@@ -17,12 +17,14 @@
 
     <ExpandableListView
         android:id="@+id/eTV"
-        android:layout_width="414dp"
-        android:layout_height="208dp"
-        android:layout_marginBottom="300dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/form_background"
         android:padding="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintDimensionRatio="1:0.7"
+        app:layout_constraintBottom_toTopOf="@+id/notificationtxt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,17 +37,18 @@
         android:id="@+id/usabilitytxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="315dp"
         android:text="Usability"
         android:textColor="#F1E9E9"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/eTV"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backSetting"
         app:layout_constraintVertical_bias="0.182" />
 
     <Button
@@ -53,12 +56,11 @@
         android:layout_width="match_parent"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="228dp"
         android:text="Delete Account"
         android:textAlignment="viewStart"
         android:textAllCaps="false"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/switch2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,8 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="480dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="24dp"
         android:text="Notification Account"
         android:textColor="#EAE3E3"
         android:textSize="18sp"
@@ -79,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eTV"
         app:layout_constraintVertical_bias="0.32999998" />
 
     <TextView
@@ -96,21 +97,20 @@
         app:layout_constraintBottom_toTopOf="@+id/eTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintStart_toEndOf="@+id/backSetting"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.084" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/backSetting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="59dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/usabilitytxt"
         app:layout_constraintEnd_toStartOf="@+id/settingHeader"
         app:layout_constraintHorizontal_bias="0.167"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.012"
         app:srcCompat="@drawable/abc_vector_test" />
 
     <Switch
