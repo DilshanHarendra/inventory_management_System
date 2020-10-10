@@ -6,5 +6,8 @@
     <color name="colorPrimary">#000785</color>
     <color name="colorAccent">#1C2D9E</color>
     <color name="light_blue">#00A4DE</color>
+    <color name="successGreen">#06C96A</color>
+    <color name="errorRed">#FF755F</color>
+
 
 </resources>

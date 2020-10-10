@@ -16,6 +16,11 @@
     <string name="date">Date</string>
     <string name="category">Category</string>
     <string name="create_income">Create Income</string>
+    <string name="succuesful">Succuesful</string>
+    <string name="successfully_updated">Successfully updated</string>
+    <string name="error">Error</string>
+    <string name="error_occured">Error occured</string>
+    <string name="operation_succuesful">Operation succuesful</string>
     <string-array name="tax_spinner">
         <item>Select Tax</item>
         <item>10% Tax</item>

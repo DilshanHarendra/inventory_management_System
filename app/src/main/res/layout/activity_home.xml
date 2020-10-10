@@ -292,7 +292,7 @@
                         android:layout_below="@+id/stockTrikingIcon"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="20dp"
-                        android:text="Stock Traking"
+                        android:text="Settings"
                         android:textSize="18sp" />
                 </RelativeLayout>
 
